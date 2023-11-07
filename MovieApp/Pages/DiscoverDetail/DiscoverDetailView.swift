@@ -39,7 +39,7 @@ final class DiscoverDetailView: UIView {
         return this
     }()
     
-    lazy var discoverDetailHeaderViewOne = DiscoverDetailHeaderView()
+    lazy var discoverDetailHeaderViewOne = MovieDetailHeaderView()
     lazy var discoverDetailHeaderViewTwo = DiscoverDetailHeaderViewTwo()
     lazy var discoverDetailBodyView = DiscoverDetailBodyView()
     

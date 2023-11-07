@@ -9,7 +9,7 @@ import UIKit
 
 extension UIColor{
     
-    //MARK:- HEXStringToUIColor
+    //MARK: Hex Color converting to UI Color
     static func hexStringToUIColor (hex:String, alpha:CGFloat = 1.0) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         

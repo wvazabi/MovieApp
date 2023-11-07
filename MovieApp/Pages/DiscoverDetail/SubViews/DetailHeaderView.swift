@@ -9,7 +9,7 @@
 import UIKit
 import iOSUtilities
 
-final class DiscoverDetailHeaderView: UIView {
+final class MovieDetailHeaderView: UIView {
     
     lazy var posterImage:ImageLoader = {
         let this = ImageLoader()
