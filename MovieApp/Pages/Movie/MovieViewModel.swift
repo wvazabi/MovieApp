@@ -1,5 +1,5 @@
 //
-//  MovieViewModelDelegate.swift
+//  MovieViewModel.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
