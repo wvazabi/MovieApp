@@ -13,91 +13,91 @@ extension MovieDetailView{
     func configureConstraints() {
         
         NSLayoutConstraint.activate([
-            discoverDetailHeaderViewOne.posterImage.topAnchor.constraint(equalTo: topAnchor),
-            discoverDetailHeaderViewOne.posterImage.bottomAnchor.constraint(equalTo:centerYAnchor),
-            discoverDetailHeaderViewOne.posterImage.leadingAnchor.constraint(equalTo: leadingAnchor),
-            discoverDetailHeaderViewOne.posterImage.trailingAnchor.constraint(equalTo: trailingAnchor)
+            movieDetailHeaderViewOne.posterImage.topAnchor.constraint(equalTo: topAnchor),
+            movieDetailHeaderViewOne.posterImage.bottomAnchor.constraint(equalTo:centerYAnchor),
+            movieDetailHeaderViewOne.posterImage.leadingAnchor.constraint(equalTo: leadingAnchor),
+            movieDetailHeaderViewOne.posterImage.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            discoverDetailHeaderViewOne.titleLabel.topAnchor.constraint(equalTo: discoverDetailHeaderViewOne.posterImage.bottomAnchor, constant: CGFloat.size10),
-            discoverDetailHeaderViewOne.titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat.size20),
-            discoverDetailHeaderViewOne.titleLabel.trailingAnchor.constraint(equalTo: discoverDetailHeaderViewTwo.fourKView.trailingAnchor, constant: -CGFloat.size40),
+            movieDetailHeaderViewOne.titleLabel.topAnchor.constraint(equalTo: movieDetailHeaderViewOne.posterImage.bottomAnchor, constant: CGFloat.size10),
+            movieDetailHeaderViewOne.titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat.size20),
+            movieDetailHeaderViewOne.titleLabel.trailingAnchor.constraint(equalTo: movieDetailHeaderViewTwo.fourKView.trailingAnchor, constant: -CGFloat.size40),
         ])
         
         NSLayoutConstraint.activate([
-            discoverDetailHeaderViewOne.ratingImage.topAnchor.constraint(equalTo: discoverDetailHeaderViewOne.titleLabel.bottomAnchor, constant: CGFloat.size10),
-            discoverDetailHeaderViewOne.ratingImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat.size20),
+            movieDetailHeaderViewOne.ratingImage.topAnchor.constraint(equalTo: movieDetailHeaderViewOne.titleLabel.bottomAnchor, constant: CGFloat.size10),
+            movieDetailHeaderViewOne.ratingImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat.size20),
         ])
         
         NSLayoutConstraint.activate([
-            discoverDetailHeaderViewOne.ratingLabel.centerYAnchor.constraint(equalTo: discoverDetailHeaderViewOne.ratingImage.centerYAnchor),
-            discoverDetailHeaderViewOne.ratingLabel.leadingAnchor.constraint(equalTo: discoverDetailHeaderViewOne.ratingImage.trailingAnchor, constant: CGFloat.size5),
+            movieDetailHeaderViewOne.ratingLabel.centerYAnchor.constraint(equalTo: movieDetailHeaderViewOne.ratingImage.centerYAnchor),
+            movieDetailHeaderViewOne.ratingLabel.leadingAnchor.constraint(equalTo: movieDetailHeaderViewOne.ratingImage.trailingAnchor, constant: CGFloat.size5),
         ])
         
         NSLayoutConstraint.activate([
-            discoverDetailHeaderViewOne.directorLabel.topAnchor.constraint(equalTo: discoverDetailHeaderViewOne.ratingImage.bottomAnchor, constant: CGFloat.size5),
-            discoverDetailHeaderViewOne.directorLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat.size20),
-            discoverDetailHeaderViewOne.directorLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -CGFloat.size20),
+            movieDetailHeaderViewOne.directorLabel.topAnchor.constraint(equalTo: movieDetailHeaderViewOne.ratingImage.bottomAnchor, constant: CGFloat.size5),
+            movieDetailHeaderViewOne.directorLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat.size20),
+            movieDetailHeaderViewOne.directorLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -CGFloat.size20),
         ])
         
         NSLayoutConstraint.activate([
-            discoverDetailHeaderViewOne.lineView.topAnchor.constraint(equalTo: discoverDetailHeaderViewOne.directorLabel.bottomAnchor, constant: CGFloat.size10),
-            discoverDetailHeaderViewOne.lineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat.size20),
-            discoverDetailHeaderViewOne.lineView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -CGFloat.size20),
-            discoverDetailHeaderViewOne.lineView.heightAnchor.constraint(equalToConstant: CGFloat.lineHeight)
+            movieDetailHeaderViewOne.lineView.topAnchor.constraint(equalTo: movieDetailHeaderViewOne.directorLabel.bottomAnchor, constant: CGFloat.size10),
+            movieDetailHeaderViewOne.lineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat.size20),
+            movieDetailHeaderViewOne.lineView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -CGFloat.size20),
+            movieDetailHeaderViewOne.lineView.heightAnchor.constraint(equalToConstant: CGFloat.lineHeight)
         ])
         
         NSLayoutConstraint.activate([
-            discoverDetailHeaderViewTwo.fourKView.centerYAnchor.constraint(equalTo: discoverDetailHeaderViewOne.titleLabel.centerYAnchor),
-            discoverDetailHeaderViewTwo.fourKView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -CGFloat.size20),
-            discoverDetailHeaderViewTwo.fourKView.widthAnchor.constraint(equalToConstant: CGFloat.size25),
-            discoverDetailHeaderViewTwo.fourKView.heightAnchor.constraint(equalToConstant: CGFloat.size25)
+            movieDetailHeaderViewTwo.fourKView.centerYAnchor.constraint(equalTo: movieDetailHeaderViewOne.titleLabel.centerYAnchor),
+            movieDetailHeaderViewTwo.fourKView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -CGFloat.size20),
+            movieDetailHeaderViewTwo.fourKView.widthAnchor.constraint(equalToConstant: CGFloat.size25),
+            movieDetailHeaderViewTwo.fourKView.heightAnchor.constraint(equalToConstant: CGFloat.size25)
         ])
         
         NSLayoutConstraint.activate([
-            discoverDetailHeaderViewTwo.fourKLabel.centerYAnchor.constraint(equalTo: discoverDetailHeaderViewTwo.fourKView.centerYAnchor),
-            discoverDetailHeaderViewTwo.fourKLabel.centerXAnchor.constraint(equalTo: discoverDetailHeaderViewTwo.fourKView.centerXAnchor),
+            movieDetailHeaderViewTwo.fourKLabel.centerYAnchor.constraint(equalTo: movieDetailHeaderViewTwo.fourKView.centerYAnchor),
+            movieDetailHeaderViewTwo.fourKLabel.centerXAnchor.constraint(equalTo: movieDetailHeaderViewTwo.fourKView.centerXAnchor),
         ])
         
         NSLayoutConstraint.activate([
-            discoverDetailHeaderViewTwo.releaseDateLabel.topAnchor.constraint(equalTo: discoverDetailHeaderViewOne.lineView.bottomAnchor, constant: CGFloat.size10),
-            discoverDetailHeaderViewTwo.releaseDateLabel.leadingAnchor.constraint(equalTo: discoverDetailHeaderViewOne.titleLabel.leadingAnchor)
+            movieDetailHeaderViewTwo.releaseDateLabel.topAnchor.constraint(equalTo: movieDetailHeaderViewOne.lineView.bottomAnchor, constant: CGFloat.size10),
+            movieDetailHeaderViewTwo.releaseDateLabel.leadingAnchor.constraint(equalTo: movieDetailHeaderViewOne.titleLabel.leadingAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            discoverDetailHeaderViewTwo.releaseDateText.topAnchor.constraint(equalTo: discoverDetailHeaderViewTwo.releaseDateLabel.bottomAnchor, constant: CGFloat.size5),
-            discoverDetailHeaderViewTwo.releaseDateText.leadingAnchor.constraint(equalTo: discoverDetailHeaderViewTwo.releaseDateLabel.leadingAnchor)
+            movieDetailHeaderViewTwo.releaseDateText.topAnchor.constraint(equalTo: movieDetailHeaderViewTwo.releaseDateLabel.bottomAnchor, constant: CGFloat.size5),
+            movieDetailHeaderViewTwo.releaseDateText.leadingAnchor.constraint(equalTo: movieDetailHeaderViewTwo.releaseDateLabel.leadingAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            discoverDetailBodyView.genreLabel.centerYAnchor.constraint(equalTo: discoverDetailHeaderViewTwo.releaseDateLabel.centerYAnchor),
-            discoverDetailBodyView.genreLabel.leadingAnchor.constraint(equalTo: discoverDetailHeaderViewTwo.releaseDateLabel.trailingAnchor, constant: CGFloat.size50)
+            movieDetailBodyView.genreLabel.centerYAnchor.constraint(equalTo: movieDetailHeaderViewTwo.releaseDateLabel.centerYAnchor),
+            movieDetailBodyView.genreLabel.leadingAnchor.constraint(equalTo: movieDetailHeaderViewTwo.releaseDateLabel.trailingAnchor, constant: CGFloat.size50)
         ])
         
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: discoverDetailBodyView.genreLabel.bottomAnchor, constant: CGFloat.size10),
+            collectionView.topAnchor.constraint(equalTo: movieDetailBodyView.genreLabel.bottomAnchor, constant: CGFloat.size10),
             collectionView.heightAnchor.constraint(equalToConstant: CGFloat.size20),
-            collectionView.leadingAnchor.constraint(equalTo: discoverDetailBodyView.genreLabel.leadingAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: movieDetailBodyView.genreLabel.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo:trailingAnchor, constant: -CGFloat.size20)
         ])
         
         NSLayoutConstraint.activate([
-            discoverDetailBodyView.lineViewTwo.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: CGFloat.size5),
-            discoverDetailBodyView.lineViewTwo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat.size20),
-            discoverDetailBodyView.lineViewTwo.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -CGFloat.size20),
-            discoverDetailBodyView.lineViewTwo.heightAnchor.constraint(equalToConstant: CGFloat.lineHeight)
+            movieDetailBodyView.lineViewTwo.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: CGFloat.size5),
+            movieDetailBodyView.lineViewTwo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat.size20),
+            movieDetailBodyView.lineViewTwo.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -CGFloat.size20),
+            movieDetailBodyView.lineViewTwo.heightAnchor.constraint(equalToConstant: CGFloat.lineHeight)
         ])
         
         NSLayoutConstraint.activate([
-            discoverDetailBodyView.synopsisLabel.topAnchor.constraint(equalTo: discoverDetailBodyView.lineViewTwo.bottomAnchor, constant: CGFloat.size20),
-            discoverDetailBodyView.synopsisLabel.leadingAnchor.constraint(equalTo: discoverDetailHeaderViewOne.titleLabel.leadingAnchor)
+            movieDetailBodyView.synopsisLabel.topAnchor.constraint(equalTo: movieDetailBodyView.lineViewTwo.bottomAnchor, constant: CGFloat.size20),
+            movieDetailBodyView.synopsisLabel.leadingAnchor.constraint(equalTo: movieDetailHeaderViewOne.titleLabel.leadingAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            discoverDetailBodyView.synopsisText.topAnchor.constraint(equalTo: discoverDetailBodyView.synopsisLabel.bottomAnchor, constant: CGFloat.size10),
-            discoverDetailBodyView.synopsisText.leadingAnchor.constraint(equalTo: discoverDetailHeaderViewOne.titleLabel.leadingAnchor),
-            discoverDetailBodyView.synopsisText.trailingAnchor.constraint(equalTo: discoverDetailBodyView.lineViewTwo.trailingAnchor)
+            movieDetailBodyView.synopsisText.topAnchor.constraint(equalTo: movieDetailBodyView.synopsisLabel.bottomAnchor, constant: CGFloat.size10),
+            movieDetailBodyView.synopsisText.leadingAnchor.constraint(equalTo: movieDetailHeaderViewOne.titleLabel.leadingAnchor),
+            movieDetailBodyView.synopsisText.trailingAnchor.constraint(equalTo: movieDetailBodyView.lineViewTwo.trailingAnchor)
         ])
         
     }

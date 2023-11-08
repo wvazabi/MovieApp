@@ -14,7 +14,7 @@ final class MovieViewController: UIViewController {
     
     //MARK:- Properties
     let contentView = MovieView()
-    let viewModel: DiscoverViewModel
+    let viewModel: MovieViewModel
     lazy var searchBar: UISearchBar = .init(frame: .zero)
     private typealias CellRegistration = UICollectionView.CellRegistration<MovieCell, MovieCell.ViewModel>
     typealias DataSource = UICollectionViewDiffableDataSource<Section, MovieCell.ViewModel>
@@ -49,7 +49,7 @@ final class MovieViewController: UIViewController {
         }
     }
     
-    init(viewModel: DiscoverViewModel, coordinator:AppCoordinator) {
+    init(viewModel: MovieViewModel, coordinator:AppCoordinator) {
         self.viewModel = viewModel
         self.appCoordinator = coordinator
         super.init(nibName: nil, bundle: nil)
@@ -65,6 +65,8 @@ final class MovieViewController: UIViewController {
         setupDelegates()
         setupNavigationBar()
         viewModel.viewDidLoad()
+        setAlert()
+
        
     }
     
@@ -97,6 +99,13 @@ final class MovieViewController: UIViewController {
         snapshot.appendSections([Section.movies])
         snapshot.appendItems(data)
         dataSource.apply(snapshot, animatingDifferences: true)
+        
+    }
+    
+    func setAlert(){
+        if viewModel.showAlert {
+            self.presentmovieAlertOnMainThread(title: "Empty Movie Name", message: "Please enter a Movie Name. We need to know which to look for 🫠", buttonTitle: "Ok")
+        }
     }
 }
 

@@ -16,25 +16,25 @@ extension MovieDetailViewController {
     @objc func clickOnImage() {
         
         if isFavorite {
-            contentView.discoverDetailHeaderViewOne.ratingImage.image = UIImage(named: StringConstants.rateImageUnselect)
+            contentView.movieDetailHeaderViewOne.ratingImage.image = UIImage(named: StringConstants.rateImageUnselect)
             isFavorite = false
             deleteItemFromFavorites()
             
             animateView(action: { [weak self] in
-                self?.contentView.discoverDetailHeaderViewOne.ratingImage.transform = .init(scaleX: 0.8, y: 0.8)
+                self?.contentView.movieDetailHeaderViewOne.ratingImage.transform = .init(scaleX: 0.8, y: 0.8)
             }, completedaction: { [weak self] in
-                self?.contentView.discoverDetailHeaderViewOne.ratingImage.transform = .identity
+                self?.contentView.movieDetailHeaderViewOne.ratingImage.transform = .identity
             })
             
         } else {
-            contentView.discoverDetailHeaderViewOne.ratingImage.image = UIImage(named: StringConstants.rateImage)
+            contentView.movieDetailHeaderViewOne.ratingImage.image = UIImage(named: StringConstants.rateImage)
             saveItemToFavorites()
             isFavorite = true
             
             animateView(action: { [weak self] in
-                self?.contentView.discoverDetailHeaderViewOne.ratingImage.transform = .init(scaleX: 1.2, y: 1.2)
+                self?.contentView.movieDetailHeaderViewOne.ratingImage.transform = .init(scaleX: 1.2, y: 1.2)
             }, completedaction: { [weak self] in
-                self?.contentView.discoverDetailHeaderViewOne.ratingImage.transform = .identity
+                self?.contentView.movieDetailHeaderViewOne.ratingImage.transform = .identity
             })
         }
     }
@@ -43,8 +43,8 @@ extension MovieDetailViewController {
     
     func setUpFavoriteImageClicked() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(clickOnImage))
-        contentView.discoverDetailHeaderViewOne.ratingImage.isUserInteractionEnabled = true
-        contentView.discoverDetailHeaderViewOne.ratingImage.addGestureRecognizer(tapGestureRecognizer)
+        contentView.movieDetailHeaderViewOne.ratingImage.isUserInteractionEnabled = true
+        contentView.movieDetailHeaderViewOne.ratingImage.addGestureRecognizer(tapGestureRecognizer)
     }
     
     // MARK: - Save Item to Favorites
@@ -70,10 +70,10 @@ extension MovieDetailViewController {
     func computeIsFavorite() {
         if checkIfInFavoriteList() {
             isFavorite = true
-            contentView.discoverDetailHeaderViewOne.ratingImage.image = UIImage(named: StringConstants.rateImage)
+            contentView.movieDetailHeaderViewOne.ratingImage.image = UIImage(named: StringConstants.rateImage)
         } else {
             isFavorite = false
-            contentView.discoverDetailHeaderViewOne.ratingImage.image = UIImage(named: StringConstants.rateImageUnselect)
+            contentView.movieDetailHeaderViewOne.ratingImage.image = UIImage(named: StringConstants.rateImageUnselect)
         }
     }
     

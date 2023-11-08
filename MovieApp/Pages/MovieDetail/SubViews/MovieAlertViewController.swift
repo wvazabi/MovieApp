@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class GFBodyLabel: UILabel {
+class movieBodyLabel: UILabel {
 
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -41,7 +41,7 @@ class GFBodyLabel: UILabel {
 }
 
 
-class GFTitleLabel: UILabel {
+class movieTitleLabel: UILabel {
 
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -73,7 +73,7 @@ class GFTitleLabel: UILabel {
 }
 
 
-class GFTextField: UITextField {
+class movieTextField: UITextField {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -108,7 +108,7 @@ class GFTextField: UITextField {
 }
 
 
-class GFButton: UIButton {
+class movieButton: UIButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -140,12 +140,12 @@ class GFButton: UIButton {
     }
     
 }
-class GFAlertVC: UIViewController {
+class movieAlertVC: UIViewController {
     
     let containerView   = UIView()
-    let titleLabel      = GFTitleLabel(textAlignment: .center, fontSize: 20)
-    let messageLabel    = GFBodyLabel(textAlignment: .center)
-    let actionButton    = GFButton(backgroundColor: .systemPink, title: "Ok")
+    let titleLabel      = movieTitleLabel(textAlignment: .center, fontSize: 20)
+    let messageLabel    = movieBodyLabel(textAlignment: .center)
+    let actionButton    = movieButton(backgroundColor: .systemPink, title: "Ok")
     
     
     var alertTitle: String?
@@ -251,9 +251,9 @@ class GFAlertVC: UIViewController {
 
 extension UIViewController {
     
-    func presentGFAlertOnMainThread(title: String, message: String, buttonTitle: String) {
+    func presentmovieAlertOnMainThread(title: String, message: String, buttonTitle: String) {
         DispatchQueue.main.async {
-            let alertVC = GFAlertVC(title: title, message: message, buttonTitle: buttonTitle)
+            let alertVC = movieAlertVC(title: title, message: message, buttonTitle: buttonTitle)
             alertVC.modalPresentationStyle  = .overFullScreen
             alertVC.modalTransitionStyle    = .crossDissolve
             self.present(alertVC, animated: true)

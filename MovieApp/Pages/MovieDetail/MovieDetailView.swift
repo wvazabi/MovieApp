@@ -39,9 +39,9 @@ final class MovieDetailView: UIView {
         return this
     }()
     
-    lazy var discoverDetailHeaderViewOne = MovieDetailHeaderView()
-    lazy var discoverDetailHeaderViewTwo = MovieDetailHeaderViewTwo()
-    lazy var discoverDetailBodyView = MovieDetailBodyView()
+    lazy var movieDetailHeaderViewOne = MovieDetailHeaderView()
+    lazy var movieDetailHeaderViewTwo = MovieDetailHeaderViewTwo()
+    lazy var movieDetailBodyView = MovieDetailBodyView()
     
   
     convenience init() {
@@ -56,21 +56,21 @@ final class MovieDetailView: UIView {
     }
 
     private func configureSubviews() {
-        addSubview(discoverDetailHeaderViewOne.posterImage)
-        addSubview(discoverDetailHeaderViewOne.titleLabel)
-        addSubview(discoverDetailHeaderViewOne.ratingLabel)
-        addSubview(discoverDetailHeaderViewOne.ratingImage)
-        addSubview(discoverDetailHeaderViewOne.directorLabel)
-        addSubview(discoverDetailHeaderViewOne.lineView)
-        addSubview(discoverDetailHeaderViewTwo.fourKView)
-        addSubview(discoverDetailHeaderViewTwo.fourKLabel)
-        addSubview(discoverDetailHeaderViewTwo.releaseDateLabel)
-        addSubview(discoverDetailHeaderViewTwo.releaseDateText)
-        addSubview(discoverDetailBodyView.genreLabel)
+        addSubview(movieDetailHeaderViewOne.posterImage)
+        addSubview(movieDetailHeaderViewOne.titleLabel)
+        addSubview(movieDetailHeaderViewOne.ratingLabel)
+        addSubview(movieDetailHeaderViewOne.ratingImage)
+        addSubview(movieDetailHeaderViewOne.directorLabel)
+        addSubview(movieDetailHeaderViewOne.lineView)
+        addSubview(movieDetailHeaderViewTwo.fourKView)
+        addSubview(movieDetailHeaderViewTwo.fourKLabel)
+        addSubview(movieDetailHeaderViewTwo.releaseDateLabel)
+        addSubview(movieDetailHeaderViewTwo.releaseDateText)
+        addSubview(movieDetailBodyView.genreLabel)
         addSubview(collectionView)
-        addSubview(discoverDetailBodyView.lineViewTwo)
-        addSubview(discoverDetailBodyView.synopsisLabel)
-        addSubview(discoverDetailBodyView.synopsisText)
+        addSubview(movieDetailBodyView.lineViewTwo)
+        addSubview(movieDetailBodyView.synopsisLabel)
+        addSubview(movieDetailBodyView.synopsisText)
     }
 
    

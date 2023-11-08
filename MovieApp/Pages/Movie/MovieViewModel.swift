@@ -10,24 +10,22 @@ import API
 import iOSUtilities
 
 protocol MovieViewModelDelegate: AnyObject {
-    func discoverViewModel(_ viewModel: DiscoverViewModel, didLoad data: [MovieCell.ViewModel])
+    func movieViewModel(_ viewModel: MovieViewModel, didLoad data: [MovieCell.ViewModel])
     func fetchSingleMovieSuccess(_ movie:Movie)
     func sendError(error:String)
 }
 
-final class DiscoverViewModel {
+final class MovieViewModel {
     
     //MARK:- Properties
-    var showAlert: Bool = false
-    var alertTitle: String = ""
-    var alertMessage: String = ""
-
+     
     weak var delegate: MovieViewModelDelegate?
     var detaildelegate: MovieDetailDelegate?
     private let session: Session
+    var showAlert: Bool = true
     private var movies: [Movie] = [] {
         didSet {
-            delegate?.discoverViewModel(self, didLoad: movies.map { movie in
+            delegate?.movieViewModel(self, didLoad: movies.map { movie in
                 return MovieCell.ViewModel(
                     id: movie.id.isNil(value: ""),
                     title: movie.title.isNil(value: ""),

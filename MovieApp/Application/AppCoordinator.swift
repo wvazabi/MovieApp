@@ -25,7 +25,7 @@ final class AppCoordinator {
     }
     
     //Move to movie detail view controller
-    func moveToMovieDetail(viewModel:DiscoverViewModel){
+    func moveToMovieDetail(viewModel:MovieViewModel){
         let detailViewModel = MovieDetailViewModel()
         let nav = MovieDetailViewController(viewModel: detailViewModel)
         viewModel.detaildelegate = nav

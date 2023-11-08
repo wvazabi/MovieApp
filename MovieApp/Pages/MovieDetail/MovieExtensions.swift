@@ -28,12 +28,12 @@ extension MovieDetailViewController: MovieDetailDelegate {
 extension MovieDetailViewController{
     //Update View Data
     func updateData(){
-        contentView.discoverDetailHeaderViewOne.posterImage.loadImageWithUrl(URL(string: viewModel.posterImage)!)
-        contentView.discoverDetailHeaderViewOne.titleLabel.text = viewModel.title
-        contentView.discoverDetailHeaderViewOne.directorLabel.text = viewModel.director
-        contentView.discoverDetailBodyView.synopsisText.text = viewModel.overview
-        contentView.discoverDetailHeaderViewOne.ratingLabel.text = viewModel.rating
-        contentView.discoverDetailHeaderViewTwo.releaseDateText.text = viewModel.releaseDate
+        contentView.movieDetailHeaderViewOne.posterImage.loadImageWithUrl(URL(string: viewModel.posterImage)!)
+        contentView.movieDetailHeaderViewOne.titleLabel.text = viewModel.title
+        contentView.movieDetailHeaderViewOne.directorLabel.text = viewModel.director
+        contentView.movieDetailBodyView.synopsisText.text = viewModel.overview
+        contentView.movieDetailHeaderViewOne.ratingLabel.text = viewModel.rating
+        contentView.movieDetailHeaderViewTwo.releaseDateText.text = viewModel.releaseDate
         let genreList = viewModel.genreArray
         
         //Update Collection View DataSource

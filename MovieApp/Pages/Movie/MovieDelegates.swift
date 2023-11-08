@@ -23,7 +23,7 @@ extension MovieViewController: MovieViewModelDelegate {
         simpleAlert(title: error)
     }
     
-    func discoverViewModel(_ viewModel: DiscoverViewModel, didLoad data: [MovieCell.ViewModel]) {
+    func movieViewModel(_ viewModel: MovieViewModel, didLoad data: [MovieCell.ViewModel]) {
         cellData = data
     }
 }
@@ -71,7 +71,9 @@ extension MovieViewController: UISearchBarDelegate {
             
             if searchText != ""{
                 self?.viewModel.queryMovie(query: searchText)
+                
             }else{
+                self?.viewModel.showAlert = false
                 self?.viewModel.viewDidLoad()
             }
             
