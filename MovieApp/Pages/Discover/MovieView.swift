@@ -1,13 +1,17 @@
 //
-//  DiscoverView.swift
+//  MovieView.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
 //
-
 import UIKit
 
-final class DiscoverView: UIView {
+// MARK: - MovieView
+
+final class MovieView: UIView {
+    
+    // MARK: - Properties
+    
     let collectionView: UICollectionView = {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(0.5),
@@ -29,22 +33,26 @@ final class DiscoverView: UIView {
         this.backgroundColor = .clear
         return this
     }()
-
+    
+    // MARK: - Initialization
+    
     convenience init() {
         self.init(frame: .zero)
         configureView()
         configureSubviews()
         configureConstraints()
     }
-
+    
+    // MARK: - Private Methods
+    
     private func configureView() {
         backgroundColor = .movieBackgroundColor
     }
-
+    
     private func configureSubviews() {
         addSubview(collectionView)
     }
-
+    
     private func configureConstraints() {
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),

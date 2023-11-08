@@ -13,7 +13,7 @@ extension Movie {
         return Request(
             path: EndPoints.all,
             method: .get,
-            parameters: [QueryParameters([.init(name: "s", value: "Batman"), .init(name: "page", value: page)])],
+            parameters: [QueryParameters([.init(name: "s", value: "Star Wars"), .init(name: "page", value: page)])],
             resource: Results<MovieResponse>.dataDecodeable(),
             error: APIError.init,
             needsAuthorization: true

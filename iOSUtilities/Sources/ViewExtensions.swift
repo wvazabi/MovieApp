@@ -38,6 +38,13 @@ extension UILabel {
 
 
 //MARK:- UIImageView
+extension ImageLoader{
+    public func setUpImageLoader(image:String, contentMode:UIView.ContentMode = .scaleAspectFill){
+        self.image = UIImage(named: image)
+        self.contentMode = contentMode
+        self.translatesAutoresizingMaskIntoConstraints = false
+    }
+}
 extension UIImageView {
     public func setUpImageView(image:String, contentMode:UIView.ContentMode = .scaleAspectFill){
         self.image = UIImage(named: image)

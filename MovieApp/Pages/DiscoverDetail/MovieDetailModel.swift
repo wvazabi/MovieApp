@@ -1,5 +1,5 @@
 //
-//  DiscoverDetailModel.swift
+//  MovieDetailModel.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
@@ -9,7 +9,11 @@ import Entities
 import API
 import iOSUtilities
 
-protocol DiscoverDetailDelegate {
+// This is the MovieDetail module.
+
+// MARK: - MovieDetail
+
+protocol MovieDetailDelegate {
     func sendMovieDetail(data:Movie?)
 }
 

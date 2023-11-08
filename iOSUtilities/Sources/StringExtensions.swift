@@ -9,8 +9,7 @@ import Foundation
 import UIKit
 
 extension String {
-    /// it will convert string to date  and exact fommated date whichever we want
-    /// - Returns: it will return a formatted date string
+    /// it will convert string to date
     public func getFormattedDate() -> String?{
         let dateFormatterGet = DateFormatter()
         let dateFormat = "dd MMM yyyy"

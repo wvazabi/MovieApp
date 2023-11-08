@@ -1,5 +1,5 @@
 //
-//  DiscoverDetailView.swift
+//  MovieDetailView.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
@@ -8,7 +8,7 @@
 import UIKit
 import iOSUtilities
 
-final class DiscoverDetailView: UIView {
+final class MovieDetailView: UIView {
     
     let collectionView: UICollectionView = {
         let itemSize = NSCollectionLayoutSize(
@@ -40,8 +40,8 @@ final class DiscoverDetailView: UIView {
     }()
     
     lazy var discoverDetailHeaderViewOne = MovieDetailHeaderView()
-    lazy var discoverDetailHeaderViewTwo = DiscoverDetailHeaderViewTwo()
-    lazy var discoverDetailBodyView = DiscoverDetailBodyView()
+    lazy var discoverDetailHeaderViewTwo = MovieDetailHeaderViewTwo()
+    lazy var discoverDetailBodyView = MovieDetailBodyView()
     
   
     convenience init() {

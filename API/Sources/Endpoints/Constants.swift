@@ -5,9 +5,11 @@
 //
 
 enum EndPoints {
+    // MARK: - Base URL
     static let baseUrl = "https://www.omdbapi.com"
-    static let all = "/"
-//    static let movieSearch = "/search/movie"
-//    static let movieList = "/genre/movie/list"
     
+    // MARK: - Endpoints
+    static let all = "/"
+    static let movieSearch = "/search/movie"
+    static let movieList = "/genre/movie/list"
 }

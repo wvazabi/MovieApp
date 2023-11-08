@@ -1,5 +1,5 @@
 //
-//  DetailViewModel.swift
+//  MovieDetailViewModel.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
@@ -8,7 +8,8 @@
 import Foundation
 import iOSUtilities
 
-final class DiscoverDetailViewModel{
+// MARK: - MovieDetailViewModel
+final class MovieDetailViewModel{
     
     var posterImage = ""
     var title = ""
@@ -19,7 +20,7 @@ final class DiscoverDetailViewModel{
     var id = ""
     var director = ""
     
-    //Compute movie detail to be used by discoverdetail view controller
+    
     func setDetail(movie:MovieDetailObj?){
         id = movie?.id ?? ""
         title = movie?.title ?? ""

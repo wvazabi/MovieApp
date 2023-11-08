@@ -1,5 +1,5 @@
 //
-//  DiscoverDetailBodyView.swift
+//  MovieDetailBodyView.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
@@ -7,7 +7,11 @@
 
 import UIKit
 
-final class DiscoverDetailBodyView: UIView {
+// MARK: - MovieDetailBodyView
+
+/// Defines the body view for displaying movie details. It includes properties for a genre label, line view, synopsis label, and synopsis text.
+
+final class MovieDetailBodyView: UIView {
    
     lazy var genreLabel:UILabel = {
         let this = UILabel()

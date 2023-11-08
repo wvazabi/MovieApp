@@ -1,5 +1,5 @@
 //
-//  DiscoverDetailViewController.swift
+//  MovieDetailViewController.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
@@ -11,11 +11,11 @@ import UIKit
 import Entities
 import iOSUtilities
 
-class DiscoverDetailViewController: UIViewController  {
+class MovieDetailViewController: UIViewController  {
     
     //MARK:- Properties
-    let contentView = DiscoverDetailView()
-    let viewModel: DiscoverDetailViewModel
+    let contentView = MovieDetailView()
+    let viewModel: MovieDetailViewModel
     var isFavorite = false
     private typealias CellRegistration = UICollectionView.CellRegistration<MovieDetailCell, MovieDetailCell.ViewModel>
     typealias DataSource = UICollectionViewDiffableDataSource<Section, MovieDetailCell.ViewModel>
@@ -41,7 +41,7 @@ class DiscoverDetailViewController: UIViewController  {
     }()
     
     //Mark:- Dependency Injection
-    init(viewModel:DiscoverDetailViewModel) {
+    init(viewModel:MovieDetailViewModel) {
        
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)

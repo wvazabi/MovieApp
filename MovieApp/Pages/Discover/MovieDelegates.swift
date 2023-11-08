@@ -1,5 +1,5 @@
 //
-//  DiscoverActions.swift
+//  MovieDelegates.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
@@ -9,8 +9,8 @@ import UIKit
 import iOSUtilities
 import Entities
 
-// MARK: DiscoverViewModel Delegate
-extension DiscoverViewController: DiscoverViewModelDelegate {
+// MARK: MovieViewModel Delegate
+extension MovieViewController: MovieViewModelDelegate {
     //Move to next screen after fetching single movie
     func fetchSingleMovieSuccess(_ movie: Movie) {
         
@@ -29,7 +29,7 @@ extension DiscoverViewController: DiscoverViewModelDelegate {
 }
 
 // MARK:- CollectionView Delegate
-extension DiscoverViewController:UICollectionViewDelegate{
+extension MovieViewController:UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) else {return}
         
@@ -63,11 +63,10 @@ extension DiscoverViewController:UICollectionViewDelegate{
 }
 
 // MARK: UISearchBar Delegate
-extension DiscoverViewController: UISearchBarDelegate {
+extension MovieViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         //This is done to ensure the api call do not trigger on every textchange, this approach drive effieciency
-        //learnt from RxSwift Debounce
         let debouncedFunc = debounce(interval: 2000, queue: .main) { [weak self] in
             
             if searchText != ""{

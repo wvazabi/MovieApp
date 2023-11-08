@@ -7,13 +7,15 @@
 
 import UIKit
 import iOSUtilities
+// MARK: - MovieDetailViewController (Favorite Actions)
 
-extension DiscoverDetailViewController{
+extension MovieDetailViewController {
     
-    //click on favorite image
-    @objc func clickOnImage(){
+    // MARK: - Image Click Action
+    
+    @objc func clickOnImage() {
         
-        if(isFavorite){
+        if isFavorite {
             contentView.discoverDetailHeaderViewOne.ratingImage.image = UIImage(named: StringConstants.rateImageUnselect)
             isFavorite = false
             deleteItemFromFavorites()
@@ -24,7 +26,7 @@ extension DiscoverDetailViewController{
                 self?.contentView.discoverDetailHeaderViewOne.ratingImage.transform = .identity
             })
             
-        }else{
+        } else {
             contentView.discoverDetailHeaderViewOne.ratingImage.image = UIImage(named: StringConstants.rateImage)
             saveItemToFavorites()
             isFavorite = true
@@ -37,43 +39,48 @@ extension DiscoverDetailViewController{
         }
     }
     
-    //Setup Favorite Image
-    func setUpFavoriteImageClicked(){
+    // MARK: - Set Up Favorite Image Clicked
+    
+    func setUpFavoriteImageClicked() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(clickOnImage))
         contentView.discoverDetailHeaderViewOne.ratingImage.isUserInteractionEnabled = true
         contentView.discoverDetailHeaderViewOne.ratingImage.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    //add to favorite items list
-    func saveItemToFavorites(){
-        if !checkIfInFavoriteList(){
+    // MARK: - Save Item to Favorites
+    
+    func saveItemToFavorites() {
+        if !checkIfInFavoriteList() {
             var favorites = retrieveArrayFromUserDefault(identifier: StringConstants.favorites)
             favorites.append(viewModel.id)
             saveArrayToUserDefault(array: favorites, identifier: StringConstants.favorites)
         }
     }
     
-    //delete item from favorites list using filter
-    func deleteItemFromFavorites(){
+    // MARK: - Delete Item from Favorites
+    
+    func deleteItemFromFavorites() {
         let favorites = retrieveArrayFromUserDefault(identifier: StringConstants.favorites)
-        let newfavorites = favorites.filter { $0 != viewModel.id }
-        saveArrayToUserDefault(array: newfavorites, identifier: StringConstants.favorites)
+        let newFavorites = favorites.filter { $0 != viewModel.id }
+        saveArrayToUserDefault(array: newFavorites, identifier: StringConstants.favorites)
     }
     
-    //check if item is user's favorite...
-    func computeIsFavorite(){
-        if checkIfInFavoriteList(){
+    // MARK: - Compute Is Favorite
+    
+    func computeIsFavorite() {
+        if checkIfInFavoriteList() {
             isFavorite = true
             contentView.discoverDetailHeaderViewOne.ratingImage.image = UIImage(named: StringConstants.rateImage)
-        }else{
+        } else {
             isFavorite = false
             contentView.discoverDetailHeaderViewOne.ratingImage.image = UIImage(named: StringConstants.rateImageUnselect)
         }
     }
     
-    //check if item in list
-    func checkIfInFavoriteList() -> Bool{
+    // MARK: - Check If Item in Favorite List
+    
+    func checkIfInFavoriteList() -> Bool {
         let favorites = retrieveArrayFromUserDefault(identifier: StringConstants.favorites)
-        return favorites.contains(viewModel.id) ? true : false
+        return favorites.contains(viewModel.id)
     }
 }

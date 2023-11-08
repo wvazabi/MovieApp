@@ -18,7 +18,7 @@ public class ImageLoader: UIImageView {
     
     public func loadImageWithUrl(_ url: URL) {
         
-        // setup activityIndicator...
+        // setup activityIndicator
         activityIndicator.color = .white
         
         addSubview(activityIndicator)
@@ -39,7 +39,7 @@ public class ImageLoader: UIImageView {
             return
         }
         
-        // image does not available in cache.. so retrieving it from url...
+        // image does not available in cache, so retrieving it from url.
         URLSession.shared.dataTask(with: url, completionHandler: { [weak self] (data, response, error) in
             
             if error != nil {

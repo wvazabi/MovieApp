@@ -1,5 +1,5 @@
 //
-//  DetailConstraints.swift
+//  MovieDetailView.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
@@ -7,7 +7,9 @@
 
 import UIKit
 
-extension DiscoverDetailView{
+// MARK: - MovieDetailView (Constraints)
+
+extension MovieDetailView{
     func configureConstraints() {
         
         NSLayoutConstraint.activate([

@@ -1,5 +1,5 @@
 //
-//  DiscoverDetailHeaderView.swift
+//  MovieDetailHeaderView.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
@@ -8,12 +8,15 @@
 
 import UIKit
 import iOSUtilities
+//import iOSUtilities
 
+// MARK: - MovieDetailHeaderView
+/// Defines the header view for displaying movie details.
 final class MovieDetailHeaderView: UIView {
     
     lazy var posterImage:ImageLoader = {
         let this = ImageLoader()
-        this.setUpImageView(image: "", contentMode: .scaleToFill)
+        this.setUpImageLoader(image: "", contentMode: .scaleAspectFill)
         return this
     }()
     

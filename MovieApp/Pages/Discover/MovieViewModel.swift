@@ -1,5 +1,5 @@
 //
-//  DiscoverViewModel.swift
+//  MovieViewModelDelegate.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
@@ -9,7 +9,7 @@ import Entities
 import API
 import iOSUtilities
 
-protocol DiscoverViewModelDelegate: AnyObject {
+protocol MovieViewModelDelegate: AnyObject {
     func discoverViewModel(_ viewModel: DiscoverViewModel, didLoad data: [MovieCell.ViewModel])
     func fetchSingleMovieSuccess(_ movie:Movie)
     func sendError(error:String)
@@ -18,8 +18,8 @@ protocol DiscoverViewModelDelegate: AnyObject {
 final class DiscoverViewModel {
     
     //MARK:- Properties
-    weak var delegate: DiscoverViewModelDelegate?
-    var detaildelegate: DiscoverDetailDelegate?
+    weak var delegate: MovieViewModelDelegate?
+    var detaildelegate: MovieDetailDelegate?
     private let session: Session
     private var movies: [Movie] = [] {
         didSet {
@@ -41,7 +41,7 @@ final class DiscoverViewModel {
     }
 
     func viewDidLoad() {
-        //Fetch Batman Movies to be displayed on the home page
+        //Fetch "X" for me It's Star Wars Movies to be displayed on the home page
         Movie.getNowPlaying(page: "1").response(using: session.client) { [weak self] response in
             
             DispatchQueue.main.async {

@@ -9,7 +9,7 @@ import UIKit
 
 final class AppCoordinator {
     private let session = Session()
-    private let detailViewModel = DiscoverDetailViewModel()
+    private let detailViewModel = MovieDetailViewModel()
     private let window: UIWindow
     private var navigationController: UINavigationController?
 
@@ -18,7 +18,7 @@ final class AppCoordinator {
     }
 
     func start() {
-        let viewController = DiscoverViewController(viewModel: .init(session: session), coordinator: self)
+        let viewController = MovieViewController(viewModel: .init(session: session), coordinator: self)
         navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
@@ -26,8 +26,8 @@ final class AppCoordinator {
     
     //Move to movie detail view controller
     func moveToMovieDetail(viewModel:DiscoverViewModel){
-        let detailViewModel = DiscoverDetailViewModel()
-        let nav = DiscoverDetailViewController(viewModel: detailViewModel)
+        let detailViewModel = MovieDetailViewModel()
+        let nav = MovieDetailViewController(viewModel: detailViewModel)
         viewModel.detaildelegate = nav
         navigationController?.pushViewController(nav, animated: true)
     }

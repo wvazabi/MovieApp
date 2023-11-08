@@ -1,5 +1,5 @@
 //
-//  DiscoverDetailHeaderViewTwo.swift
+//  MovieDetailHeaderViewTwo.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
@@ -8,7 +8,11 @@
 import UIKit
 import iOSUtilities
 
-final class DiscoverDetailHeaderViewTwo: UIView {
+// MARK: - MovieDetailHeaderViewTwo
+
+/// This class defines the header view for displaying details about a movie. It includes properties for a 4K view, 4K label, release date label, and release date text.
+
+final class MovieDetailHeaderViewTwo: UIView {
    
     lazy var fourKView:UIView = {
         let this = UIView()

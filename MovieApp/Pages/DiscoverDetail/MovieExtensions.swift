@@ -1,5 +1,5 @@
 //
-//  Discover_Delegates.swift
+//  MovieExtension.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
@@ -8,8 +8,8 @@
 import UIKit
 import Entities
 
-// MARK: DiscoverViewModel Delegate
-extension DiscoverDetailViewController: DiscoverDetailDelegate {
+// MARK: MovieViewModel Delegate
+extension MovieDetailViewController: MovieDetailDelegate {
     
     func sendMovieDetail(data: Movie?) {
         let movie = data?.convertMovieToMovieDetailObj()
@@ -25,7 +25,7 @@ extension DiscoverDetailViewController: DiscoverDetailDelegate {
 }
 
 //MARK:- Actions
-extension DiscoverDetailViewController{
+extension MovieDetailViewController{
     //Update View Data
     func updateData(){
         contentView.discoverDetailHeaderViewOne.posterImage.loadImageWithUrl(URL(string: viewModel.posterImage)!)

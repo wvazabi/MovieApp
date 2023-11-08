@@ -4,11 +4,14 @@
 //
 //  Created by Enes Kaya on 7.11.2023.
 //
+// MARK: - MovieCell
 
 import UIKit
 import iOSUtilities
 
 final class MovieCell: UICollectionViewCell {
+    
+    // MARK: - Properties
     
     let titleLabel: UILabel = {
         let this = UILabel()
@@ -16,7 +19,7 @@ final class MovieCell: UICollectionViewCell {
                            numberOfLines: 3)
         return this
     }()
- 
+    
     let imageView: ImageLoader = {
         let this = ImageLoader()
         this.translatesAutoresizingMaskIntoConstraints = false
@@ -26,6 +29,8 @@ final class MovieCell: UICollectionViewCell {
         this.layer.cornerRadius = CGFloat.size18
         return this
     }()
+    
+    // MARK: - Initialization
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -37,13 +42,14 @@ final class MovieCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private Methods
+    
     private func configureSubviews() {
         addSubview(titleLabel)
         addSubview(imageView)
     }
     
     private func configureConstraints() {
-        
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: topAnchor),
             imageView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
@@ -55,17 +61,18 @@ final class MovieCell: UICollectionViewCell {
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
         ])
-
     }
 }
+
+// MARK: - MovieCell ViewModel
 
 extension MovieCell {
     struct ViewModel: Hashable {
         let id: String
         let title: String
-        let image:String
-        let year:String
-        let uuid:String
+        let image: String
+        let year: String
+        let uuid: String
     }
     
     func populate(data: ViewModel) {

@@ -2,7 +2,7 @@
 //  MovieDetailCell.swift
 //  Moviestar
 //
-//  Created by Guru on 19/09/2021.
+//  Created by Enes Kaya on 8.11.2023.
 //
 
 import UIKit

@@ -1,5 +1,5 @@
 //
-//  DiscoverViewController.swift
+//  MovieViewController.swift
 //  MovieApp
 //
 //  Created by Enes Kaya on 7.11.2023.
@@ -8,12 +8,12 @@
 import UIKit
 import iOSUtilities
 
-final class DiscoverViewController: UIViewController {
+final class MovieViewController: UIViewController {
     
     weak var appCoordinator:AppCoordinator?
     
     //MARK:- Properties
-    let contentView = DiscoverView()
+    let contentView = MovieView()
     let viewModel: DiscoverViewModel
     lazy var searchBar: UISearchBar = .init(frame: .zero)
     private typealias CellRegistration = UICollectionView.CellRegistration<MovieCell, MovieCell.ViewModel>
