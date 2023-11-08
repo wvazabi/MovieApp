@@ -18,6 +18,10 @@ protocol MovieViewModelDelegate: AnyObject {
 final class DiscoverViewModel {
     
     //MARK:- Properties
+    var showAlert: Bool = false
+    var alertTitle: String = ""
+    var alertMessage: String = ""
+
     weak var delegate: MovieViewModelDelegate?
     var detaildelegate: MovieDetailDelegate?
     private let session: Session
@@ -50,6 +54,7 @@ final class DiscoverViewModel {
                 case .success(let data):
                     
                     self?.movies =  data.search ?? []
+                    
                     
                 case .failure(let error):
                     
@@ -115,4 +120,7 @@ final class DiscoverViewModel {
         
         return movies.filter{ $0.id == cell.id }.first?.id
     }
+    
+  
 }
+

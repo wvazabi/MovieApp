@@ -65,6 +65,7 @@ final class MovieViewController: UIViewController {
         setupDelegates()
         setupNavigationBar()
         viewModel.viewDidLoad()
+       
     }
     
     override func loadView() {

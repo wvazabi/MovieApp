@@ -39,5 +39,7 @@ extension MovieDetailViewController{
         //Update Collection View DataSource
         makeSnapShot(data: genreList)
     }
+    
+    
 }
 

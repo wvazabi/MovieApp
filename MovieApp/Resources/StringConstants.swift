@@ -14,8 +14,8 @@ enum StringConstants {
     static let rate = "7.0 (IMDb)"
     static let genre = "Genre"
     static let synopsis = "Synopsis"
-    static let apikey = "e8f23a02"
-    static let director = "Directed by Wright Phillips"
+    static let apikey = "268aa35f"
+    static let director = "Directed by George Lucas"
     static let favorites = "favorites"
 
 }

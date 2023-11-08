@@ -61,6 +61,7 @@ class MovieDetailViewController: UIViewController  {
         computeIsFavorite()
         setUpFavoriteImageClicked()
         updateData()
+        
     }
     
     //MARK:- ViewWillAppear
